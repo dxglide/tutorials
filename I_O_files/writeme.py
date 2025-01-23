@@ -1,5 +1,6 @@
 # https://www.pythontutorial.net/python-basics/python-write-text-file/
 
+import os
 
 print ("-----  I/O FILES   ----  ")
 print ("-----  Writting  to   a file   ----  ")
@@ -14,8 +15,11 @@ def file_path(file, file_dir):
     return os.path.join(os.getcwd(), file_dir, file)
     #return  str(os.getcwd()) + '\\' + file_dir + '\\' + file
 
-file =  file_path('write.txt', 'I_O_files')
+file =  file_path('writeme.txt', 'I_O_files')
 
 lines = ['Readme', 'How to write text files in Python']
+
 with open(file, 'w',  encoding='utf8') as f:
-    f.write('readme')
+     for line in lines:
+        f.write(line)
+        f.write('\n')
