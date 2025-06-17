@@ -27,5 +27,3 @@ print(repr(person))  # Person("John","Doe",25)
 
 print("-------- __eq__  --------")
 # https://www.pythontutorial.net/python-oop/python-__eq__/
-
-
